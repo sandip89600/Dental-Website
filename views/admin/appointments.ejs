@@ -1,0 +1,44 @@
+<%- include ("../user/navbar.ejs") %>
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h5 class="text-primary text-uppercase">Admin Panel</h5>
+            <h1 class="display-5 mb-0">Manage Appointments</h1>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered shadow-sm" border="1">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Service</th>
+                        <th>Doctor</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% appointments.forEach(app => { %>
+                        <tr>
+                            <td><%= app.id %></td>
+                            <td><%= app.name %></td>
+                            <td><%= app.email %></td>
+                            <td><span class="badge bg-info text-dark"><%= app.service %></span></td>
+                            <td><%= app.doctor %></td>
+                            <td><%= app.appointment_date %></td>
+                            <td><%= app.appointment_time %></td>
+                            <td>
+            <a href="/admin/edit-appointment/<%= app.id %>">Edit</a> |
+            <a href="/admin/delete-appointment/<%= app.id %>" onclick="return confirm('Delete?')">Delete</a>
+         </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<%- include ("../user/footer.ejs") %>

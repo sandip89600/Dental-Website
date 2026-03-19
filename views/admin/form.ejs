@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Hours</title>
+    <style>
+    .hours-form {
+   width: 350px;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   margin-top: 20px;
+}
+
+.hours-form input {
+   padding: 10px;
+   border-radius: 6px;
+   border: 1px solid #ccc;
+   outline: none;
+   transition: 0.3s;
+}
+
+.hours-form input:focus {
+   border-color: #1e90ff;
+   box-shadow: 0 0 5px rgba(30,144,255,0.3);
+}
+
+.hours-form button {
+   padding: 10px;
+   border: none;
+   background: #1e90ff;
+   color: white;
+   border-radius: 6px;
+   cursor: pointer;
+   font-weight: bold;
+   transition: 0.3s;
+}
+
+.hours-form button:hover {
+   background: #187bcd;
+}
+
+</style>
+</head>
+
+<body>
+    <h2>Update Opening Hours</h2>
+
+    <form action="/admin/update-hours" method="POST" class="hours-form">
+
+        <input type="text" name="days" placeholder="Opening Days (Mon - Sat)" required>
+
+        <input type="text" name="open" placeholder="Opening Time (6:00 AM)" required>
+
+        <input type="text" name="close" placeholder="Closing Time (10:00 PM)" required>
+
+        <input type="text" name="sunday" placeholder="Sunday Status (Closed / Open)" required>
+
+        <button type="submit">Update</button>
+
+    </form>
+
+</body>
+
+</html>

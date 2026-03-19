@@ -1,0 +1,25 @@
+<%- include ("navbar.ejs")%>
+    <div class="main-panel">
+        <div class="content">
+            <div class="container-fluid">
+                <h4 class="page-title">Update Service 1</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/admin/save_data" method="post" enctype="multipart/form-data">
+
+                            <input type="text" name="s_name">
+
+                            <input type="file" name="s_image1">
+                            <input type="file" name="s_image2">
+
+                            <button type="submit">Save</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include ("footer.ejs")%>

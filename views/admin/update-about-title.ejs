@@ -1,0 +1,34 @@
+<%- include ("navbar.ejs")%>
+
+<h2 class="text-center">Update About Page Title</h2>
+
+<form action="/admin/update-about-title" method="POST" class="d-flex align-items-center justify-content-center flex-column" enctype="multipart/form-data">
+    <div class="mb-3 w-25">
+        <label for="about_title" class="form-label">About Page Title</label>
+        <input type="text" class="form-control rounded" id="about_title" name="about_title" placeholder="Enter About Page Title" required>
+    </div>
+    
+    <div class="mb-3 w-25">
+        <label for="about_subtitle" class="form-label">About Page Subtitle</label>
+        <input type="text" class="form-control rounded" id="about_subtitle" name="about_subtitle" placeholder="Enter About Page Subtitle" required>
+    </div>
+    
+    <div class="mb-3 w-25">
+        <label for="about_subtitle1" class="form-label">About Page Subtitle 1</label>
+        <input type="text" class="form-control rounded" id="about_subtitle1" name="about_subtitle1" placeholder="Enter About Page Subtitle1" required>
+    </div>
+    
+    <div class="mb-3 w-25">
+        <label for="about_description" class="form-label">About Page Description</label>
+        <input type="text" class="form-control rounded" id="about_description" name="about_description" placeholder="Enter About Page Description" required>
+    </div>
+    
+    <div class="mb-3 w-25">
+        <label for="about_image" class="form-label">Upload Image</label>
+        <input type="file" class="form-control rounded border-1" id="about_image" name="about_image">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Update Title</button>
+</form>
+</form>
+    <%- include ("footer.ejs")%>

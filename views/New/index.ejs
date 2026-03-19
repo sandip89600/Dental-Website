@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+  --primary: #4f46e5;
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --text: #111827;
+  --border: #e5e7eb;
+}
+
+body { font-family: 'Inter', sans-serif; background: var(--bg); padding: 40px; }
+
+.schedule-card {
+  max-width: 550px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 30px;
+  margin: auto;
+}
+
+.card-header h2 { margin: 0; color: var(--text); }
+.card-header p { color: #6b7280; font-size: 14px; margin-bottom: 25px; }
+
+.day-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.day-name { font-weight: 600; width: 100px; color: var(--text); }
+
+.controls { display: flex; align-items: center; gap: 20px; }
+
+/* Segmented Toggle Styling */
+.toggle-group {
+  display: flex;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.toggle-group input { display: none; }
+
+.toggle-group label {
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.toggle-group input:checked + label {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Time Picker Styling */
+.time-pickers { display: flex; align-items: center; gap: 8px; }
+.time-pickers.hidden { visibility: hidden; opacity: 0; width: 0; overflow: hidden; }
+
+input[type="time"] {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 14px;
+}
+
+.save-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.save-btn:hover { filter: brightness(1.1); }
+  </style>
+</head>
+<body>
+  <div class="schedule-card">
+  <div class="card-header">
+    <h2>Business Hours</h2>
+    <p>Set your weekly opening and closing times</p>
+  </div>
+
+  <form class="schedule-form">
+    <div class="day-row">
+      <div class="day-info">
+        <span class="day-name">Monday</span>
+      </div>
+      
+      <div class="controls">
+        <div class="toggle-group">
+          <input type="radio" name="status-mon" id="mon-open" value="open" checked>
+          <label for="mon-open">Open</label>
+          <input type="radio" name="status-mon" id="mon-closed" value="closed">
+          <label for="mon-closed">Closed</label>
+        </div>
+
+        <div class="time-pickers" id="time-mon">
+          <input type="time" value="09:00">
+          <span class="separator">to</span>
+          <input type="time" value="18:00">
+        </div>
+      </div>
+    </div>
+
+    <div class="day-row closed">
+      <div class="day-info">
+        <span class="day-name">Sunday</span>
+      </div>
+      
+      <div class="controls">
+        <div class="toggle-group">
+          <input type="radio" name="status-sun" id="sun-open" value="open">
+          <label for="sun-open">Open</label>
+          <input type="radio" name="status-sun" id="sun-closed" value="closed" checked>
+          <label for="sun-closed">Closed</label>
+        </div>
+
+        <div class="time-pickers hidden" id="time-sun">
+          <input type="time" disabled>
+          <span class="separator">to</span>
+          <input type="time" disabled>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="save-btn">Save Schedule</button>
+  </form>
+</div>
+</body>
+</html>

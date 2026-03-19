@@ -1,0 +1,191 @@
+<%- include ("navbar.ejs")%>
+
+
+    </div>
+    <div class="sidebar">
+        <div class="scrollbar-inner sidebar-wrapper">
+            <div class="user">
+                <div class="photo">
+                    <img src="/admin/img/profile.jpg">
+                </div>
+                <div class="info">
+                    <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+                        <span>
+                            Hizrian
+                            <span class="user-level">Administrator</span>
+                            <span class="caret"></span>
+                        </span>
+                    </a>
+                    <div class="clearfix"></div>
+
+                    <div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+                        <ul class="nav">
+                            <li>
+                                <a href="#profile">
+                                    <span class="link-collapse">My Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#edit">
+                                    <span class="link-collapse">Edit Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#settings">
+                                    <span class="link-collapse">Settings</span>
+                                </a>
+                            </li>
+                            <a href="#settings">
+                                <span class="link-collapse">Form</span>
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav">
+                <li class="nav-item active">
+                    <a href="/admin">
+                        <i class="la la-dashboard"></i>
+                        <p>Dashboard</p>
+                        <span class="badge badge-count">5</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="/admin/form">
+                        <i class="la la-arrow-right"></i>
+                        <p>Update Opening Hours</p>
+                        <span class="badge badge-count">1</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="/admin/update-about-title">
+                        <i class="la la-arrow-right"></i>
+                        <p>Update About</p>
+                        <span class="badge badge-count">1</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="/admin/update-appointment">
+                        <i class="la la-arrow-right"></i>
+                        <p>Update Appointment</p>
+                        <span class="badge badge-count">1</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="/admin/appointments">
+                        <i class="la la-arrow-right"></i>
+                        <p>Appointment Table</p>
+                        <span class="badge badge-count">1</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="/admin/service1">
+                        <i class="la la-arrow-right"></i>
+                        <p>Service1</p>
+                        <span class="badge badge-count">1</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="/admin/doctors">
+                        <i class="la la-arrow-right"></i>
+                        <p>doctors</p>
+                        <span class="badge badge-count">1</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="/admin/doctor-lists">
+                        <i class="la la-arrow-right"></i>
+                        <p>doctors-lists</p>
+                        <span class="badge badge-count">1</span>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+    <div class="main-panel">
+        <div class="content">
+            <div class="container-fluid">
+                <h4 class="page-title">Dashboard</h4>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card card-stats card-warning">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="icon-big text-center">
+                                            <i class="la la-users"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 d-flex align-items-center">
+                                        <div class="numbers">
+                                            <p class="card-category">Visitors</p>
+                                            <h4 class="card-title">1,294</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card card-stats card-success">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="icon-big text-center">
+                                            <i class="la la-bar-chart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 d-flex align-items-center">
+                                        <div class="numbers">
+                                            <p class="card-category">Sales</p>
+                                            <h4 class="card-title">$ 1,345</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card card-stats card-danger">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="icon-big text-center">
+                                            <i class="la la-newspaper-o"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 d-flex align-items-center">
+                                        <div class="numbers">
+                                            <p class="card-category">Subscribers</p>
+                                            <h4 class="card-title">1303</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card card-stats card-primary">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="icon-big text-center">
+                                            <i class="la la-check-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 d-flex align-items-center">
+                                        <div class="numbers">
+                                            <p class="card-category">Order</p>
+                                            <h4 class="card-title">576</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <%- include ("footer.ejs")%>
