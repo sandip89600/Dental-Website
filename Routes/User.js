@@ -19,7 +19,7 @@ router.get("/about", async (req, res) => {
     const result = await db("SELECT * FROM about_settings WHERE id=1");
     res.render("user/about.ejs", {
         hours: result1[0],
-        about: result
+        about: result[0]
     });
 });
 

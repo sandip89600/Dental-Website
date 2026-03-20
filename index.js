@@ -7,18 +7,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const connection = mysql.createConnection({
-    host: 'localhost', 
-    user: 'root',
-    password: 'password',
-    database: 'school'
+    host: 'bzy71r43bjhtsxxxswaw-mysql.services.clever-cloud.com', 
+    user: 'uhmbik6gbjq8psrl',
+    password: 'RNP4dQOqNsNKCFiyQ2WY',
+    database: 'bzy71r43bjhtsxxxswaw'
 });
 app.use("/uploads", express.static("uploads")); 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
-
+ 
 var useRouter = require("./Routes/User");
 var adminRouter = require("./Routes/admin");
-
+ 
 app.use("/",useRouter);
 app.use("/admin",adminRouter);
  
