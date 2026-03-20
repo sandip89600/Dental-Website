@@ -17,6 +17,18 @@ const upload = multer({ storage: storage })
 
 
 
+router.get("/test", async (req, res) => {
+    try {
+        const db = req.app.get("db");
+
+        const [rows] = await db.query("SELECT * FROM your_table");
+
+        res.json(rows);
+    } catch (err) {
+        console.log(err);
+        res.send("DB Error");
+    }
+});
 
 router.get("/", (req, res) => {
     res.render("admin/dashboard.ejs")
