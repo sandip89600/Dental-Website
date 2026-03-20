@@ -13,6 +13,18 @@ router.get("/", async (req, res) => {
     });
 });
 
+router.get("/test", async (req, res) => {
+    try {
+        const db = req.app.get("db");
+
+        const [rows] = await db.query("SELECT * FROM your_table");
+
+        res.json(rows);
+    } catch (err) {
+        console.log(err);
+        res.send("DB Error");
+    }
+});
 // Other pages (Static)
 router.get("/about", async (req, res) => {
     const result1 = await db("SELECT * FROM site_settings WHERE id=1");
